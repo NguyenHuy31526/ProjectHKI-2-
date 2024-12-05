@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="3HKT">
+    <meta name="keywords" content="Trang hỗ trợ học tập cho sinh viên công nghệ thông tin">
+    <title>Trang chủ</title>
+    <style>
+        /* css thanh menu và header */
+
+
+        body {
+            background: linear-gradient(to top right,
+                    #e0f7fa,
+                    #80d0c7,
+                    #00bcd4,
+                    #26a69a,
+                    #4db6ac,
+                    #80deea,
+                    #b2ebf2,
+                    #c1f4f1,
+                    #b2dfdb,
+                    #64b5f6,
+                    #81d4fa,
+                    #b3e5fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            /* Kiểu chữ hiện đại */
+            font-size: 3rem;
+            /* Kích thước chữ lớn hơn */
+            font-weight: bold;
+            /* Chữ đậm */
+            text-transform: uppercase;
+            /* Viết hoa */
+            letter-spacing: 3px;
+            /* Khoảng cách rộng giữa các chữ */
+            background: #136842;
+            /* Hiệu ứng chuyển màu */
+            -webkit-background-clip: text;
+            /* Chỉ áp dụng gradient cho chữ */
+            -webkit-text-fill-color: transparent;
+            /* Làm chữ trong suốt để lộ gradient */
+           
+            animation: glow 2s infinite;
+            /* Hiệu ứng phát sáng */
+            position: relative;
+            display: inline-block;
+        }
+
+
+
+
+
+        header {
+            display: flex;
+            flex-direction: column;
+            /* Sắp xếp theo cột */
+            align-items: center;
+            /* Căn giữa theo chiều ngang */
+            justify-content: center;
+            /* Căn giữa theo chiều dọc */
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            border-top: 3px solid #0066cc;
+            border-bottom: 3px solid #0066cc;
+            padding: 10px 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: linear-gradient(90deg, #0066cc, #00509e);
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        
+
+
+        .nutdangnhap button {
+            padding: 5px 10px;
+            background-color: #d0e1fc;
+            color: #0066cc;
+            font-weight: bold;
+            border: none;
+
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nutdangnhap button:hover {
+            background-color: #00509e;
+            color: #fff;
+        }
+
+        /* css thanh tìm kiếm */
+
+        .form1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 2px solid #0066cc;
+            border-radius: 50px;
+            /* Làm bo góc tròn */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            width: 80%;
+            /* Co lại để gọn hơn */
+            max-width: 600px;
+            margin: 20px auto;
+            /* Căn giữa trên trang */
+        }
+
+        input[type="search"] {
+            flex: 1;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            color: #333;
+            background-color: #f0f4f8;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        input[type="search"]:focus {
+            box-shadow: 0 0 10px #0066cc;
+            background-color: #e8f0fe;
+        }
+
+        .nuttimkiem {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nuttimkiem:hover {
+            background-color: #00509e;
+            transform: scale(1.1);
+            /* Phóng to khi rê chuột */
+        }
+
+        .nuttimkiem:active {
+            transform: scale(0.95);
+            /* Nhấn xuống khi click */
+        }
+
+
+        /* css các ô khóa học */
+        .xai-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        section a {
+            color: #ffffff;
+        }
+
+        .khoahoc {
+            border: 0px solid #1815c1;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            /* tạo delay cho các ô khóa học */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .khoahoc:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .anhkhoahoc {
+            width: 150px;
+            height: 150px;
+        }
+
+        .nutkhoa {
+            width: 100%;
+            padding: 10px;
+            background-color: #1815c1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .nutkhoa:hover {
+            background-color: hsl(221, 70%, 71%);
+        }
+
+        /* css của khung bên trái */
+        .khungtrai {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .form2 {
+            flex: 1;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .form2 h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .form2 label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form2 input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form2 button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1815c1;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        .form2 button:hover {
+            background-color: hsl(221, 70%, 71%);
+        }
+
+        /* css video nghề trong IT */
+        .videonghe {
+            display: flex;
+            justify-content: center;
+            /* Căn giữa theo chiều ngang */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            height: 60vh;
+            /* Chiều cao bằng 100% viewport */
+        }
+
+        iframe {
+            width: 600px;
+            height: 350px;
+            border: none;
+            /* Bỏ border của iframe */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-text">
+            3HKT
+        </div>
+        <h1>HỖ TRỢ HỌC TẬP</h1>
+
+    </header>
+    <!-- nút đăng nhập -->
+    <div class="nutdangnhap">
+
+        <button><a href="trangdangnhap.html">Đăng nhập</a> </button>
+        <button><a href="trangdangky.html">Đăng ký</a> </button>
+    </div>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="Chưa đăng nhập/Trangthuvientailieu2.html">Thư viện</a></li>
+                <li><a href="Chưa đăng nhập/trangdiendan2.html">Diễn đàn</a></li>
+                <li><a href="Chưa đăng nhập/tranglichhoc2.html">Lịch học</a></li>
+                <li><a href="Chưa đăng nhập/trangkhungcode2.html">Khung code</a></li>
+                <li><a href="Settings/admin.html">Admin</a></li>
+                
+            </ul>
+        </nav>
+        <section>
+            <form class="form1" method="get">
+                <input type="search" placeholder="tìm kiếm khóa học"><button class="nuttimkiem">Tìm kiếm</button>
+            </form>
+        </section>
+        <!-- phần điền trong tin bên tay trái -->
+        <div class="khungtrai">
+
+            <div class="form2">
+                <h2>Điền thông tin của bạn để kiểm tra tiến độ học tập</h2>
+                <form action="#" method="post">
+                    <label for="name">
+                        <h3>Họ và Tên:</h3>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+
+
+
+                    <label for="email">
+                        <h3>Email:</h3>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+                    <label for="muctieu">
+                        <h3>Bạn đã đạt được mục tiêu nào trong tuần này chưa?</h3>
+                    </label>
+                    <textarea id="muctieu" name="muctieu" required style="width: 450px; height: 200px;"></textarea>
+
+                    <label for="thoigian">
+                        <h3>Bạn thường học vào khung giờ nào?</h3>
+                    </label>
+                    <input type="time" id="thoigian" name="thoigian" required>
+
+                    <label for="duan">
+                        <h3>Mức độ hiểu bài của bạn nhiều hay ít? (Hãy thể hiện qua mức độ ở thanh
+                            trượt)</h3>
+                    </label>
+                    <input type="range" id="duan" name="duan" min="0" max="50" step="1" required>
+
+                    <label for="sothich">
+                        <h3>Bạn thích thể loại môn học nào nhất ở 3HKT</h3>
+                    </label>
+                    <select style="padding: 10px;">
+                        <option>Môn lập trình</option>
+                        <option>Môn toán</option>
+                        <option>Cơ sở dữ liệu</option>
+                        <option>Cấu trúc dữ liệu</option>
+                    </select>
+
+
+
+                    <button type="submit">Gửi thông tin</button>
+                </form>
+            </div>
+            <section class="xai-grid">
+                <!-- khóa học 1 -->
+                <div class="khoahoc">
+                    <img src="images/C++.png" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>
+                        C++
+
+                    </h2>
+                    </p>
+
+
+                    <button class="nutkhoa" id="nutkhoa1">VÀO HỌC </button>
+                </div>
+                <!-- khóa học 2 -->
+                <div class="khoahoc">
+                    <img src="images/html5.png" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>
+                        HTML5
+                    </h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa2">VÀO HỌC</button>
+                </div>
+                <!-- khóa học 3 -->
+                <div class="khoahoc">
+                    <img src="images/css3.png" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>
+                        CSS3
+                    </h2>
+                    </p>
+
+
+                    <button class="nutkhoa" id="nutkhoa3">VÀO HỌC </button>
+                </div>
+                <!-- khóa học 4 -->
+                <div class="khoahoc">
+                    <img src="images/js.png" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Javascript </h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa4">VÀO HỌC</button>
+                </div>
+                <!-- khóa học 5 -->
+                <div class="khoahoc">
+                    <img src="images/oop.png" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>OOP</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa5">VÀO HỌC</button>
+                </div>
+                <!-- khóa học 6 -->
+                <div class="khoahoc">
+                    <img src="images/python.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Python</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa6">VÀO HỌC</button>
+                </div>
+                <!-- khóa học 7 -->
+                <div class="khoahoc">
+                    <img src="images/CTDL.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Cấu trúc dữ liệu</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa7"> VÀO HỌC</button>
+                </div>
+                <!-- khóa học 8 -->
+                <div class="khoahoc">
+                    <img src="images/CSDL.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Cơ sở dữ liệu</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa8">VÀO HỌC</button>
+                </div>
+                <!-- khóa học 9 -->
+                <div class="khoahoc">
+                    <img src="images/AI.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>AI và Học máy</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa9"> VÀO HỌC</button>
+                </div>
+
+                <!-- khóa học 10 -->
+                <div class="khoahoc">
+                    <img src="images/TRR.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Toán rời rạc</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa10"> VÀO HỌC</button>
+                </div>
+                <!-- khóa học 11 -->
+                <div class="khoahoc">
+                    <img src="images/ĐSTT.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Đại số tuyến tính</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa11"> VÀO HỌC</button>
+                </div>
+                <!-- khóa học 12 -->
+                <div class="khoahoc">
+                    <img src="images/GT1.jpg" alt="ảnh khóa học" class="anhkhoahoc">
+                    <p class="tieude">
+                    <h2>Giải tích 1</h2>
+                    </p>
+                    <button class="nutkhoa" id="nutkhoa12"> VÀO HỌC</button>
+                </div>
+            </section>
+        </div>
+        <!-- video về các ngành nghề trong công nghệ thông tin -->
+        <br>
+        <br>
+        <hr color="#fff">
+        <br>
+        <br>
+        <h3 style="text-align: center; color: #fff;">Một số ngành nghề trong ngành công nghệ thông tin</h3>
+        <div class="videonghe">
+            <iframe src="https://www.youtube.com/embed/6F3Ma2GrYmo?si=P429WiR-mO5l5dO8" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+        <hr style="margin-top: 20px; color: #fff;">
+
+
+
+    </main>
+
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của bạn
+            trong tương lai.</h4>
+    </footer>
+
+
+    <script>
+      
+
+
+
+
+        document.getElementById("nutkhoa1").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa2").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa3").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa4").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa5").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa6").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa7").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa8").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa9").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa10").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa11").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+
+        document.getElementById("nutkhoa12").addEventListener("click", function () {
+            var button = this; // Get the clicked button
+            button.innerText = "HÃY ĐĂNG NHẬP"; // Change the text to "Hãy đăng nhập"
+            setTimeout(function () {
+                button.innerText = "VÀO HỌC"; // After 2 seconds, change it back to "Vào học"
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+
+</body>
+
+</html>

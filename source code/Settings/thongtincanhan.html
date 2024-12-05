@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74b9ff,#43ffff, #a29bfe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #2d3436;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #636e72;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #dfe6e9;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #2d3436;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #0984e3;
+            box-shadow: 0 0 4px rgba(9, 132, 227, 0.4);
+        }
+
+        form button {
+            width: 30%;
+            padding: 10px;
+            background: #0984e3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #74b9ff;
+        }
+
+        form button:focus {
+            outline: none;
+        }
+
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2d3436;
+        }
+        form select{
+            margin-bottom: 20px;
+        }
+
+        form a{
+            color: #ffffff;
+        }
+        .button {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <h1>Thông tin cá nhân</h1>
+        <label for="username">Username</label>
+        <input id="username" type="text" value="admin" >
+
+        
+
+        <label for="email">Email</label>
+        <input id="email" type="email" value="3hkt@gmail.com" >
+        
+        <label for="password">Password</label>
+        <input id="password" type="password" value="123456">
+
+        <label for="xacnhanpassword">Xác nhận mật khẩu</label>
+        <input id="xacnhanpassword" type="password" value="123456" >
+
+        <label for="phonenumber">Số điện thoại</label>
+        <input id="phonenumber" type="number" value="0123456789" >
+
+        <label for="tentruong">Bạn đang học ở trường nào?</label>
+        <input id="tentruong" type="text" value="Trường Đại học Sư phạm thành phố Hồ Chí" >
+
+        <label for="gioitinh">Giới tính</label>
+        <select >
+            <option>Nam</option>
+            <option>Nữ</option>
+        </select>
+        <div class="button">
+            <button type="button" onclick="vaotrangchu()">Save</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+    <script>
+         function vaotrangchu(event) {
+        window.location.href="../Trangchu2.html"
+           
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa Học Lập Trình Hướng Đối Tượng</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+        }
+
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: #069a32;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: glow 2s infinite;
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        .back-button {
+            top: 12%;
+            left: 10px;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+        }
+
+        table {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #0066cc;
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>Khóa Học Lập Trình Hướng Đối Tượng</h1>
+    </header>
+
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+
+            <h2>[Giới Thiệu Lập Trình Hướng Đối Tượng]</h2>
+            <small>Lập trình hướng đối tượng là phương pháp lập trình sử dụng các đối tượng để mô phỏng các thực thể trong thế giới thực.</small>
+            <hr>
+            <h3>Lập Trình Hướng Đối Tượng Là Gì?</h3>
+            <p>
+                Lập trình hướng đối tượng (OOP) là một phương pháp lập trình trong đó các đối tượng chứa cả dữ liệu và các phương thức để thao tác với dữ liệu đó. Các đối tượng này được tổ chức trong các lớp (classes). OOP giúp tổ chức mã nguồn một cách rõ ràng và dễ dàng bảo trì. Các chủ đề chính trong lập trình hướng đối tượng bao gồm:
+                <ul>
+                    <li>Khái niệm về lớp và đối tượng</li>
+                    <li>Các tính chất của OOP: đóng gói, kế thừa, đa hình, và trừu tượng</li>
+                    <li>Phương thức và thuộc tính</li>
+                    <li>Quản lý đối tượng trong bộ nhớ</li>
+                    <li>Ví dụ thực tế và ứng dụng OOP trong các ngôn ngữ lập trình</li>
+                </ul>
+            </p>
+            <hr>
+            <h3>4 Tính Chất Chính Của Lập Trình Hướng Đối Tượng</h3>
+            <p>
+                Lập trình hướng đối tượng được đặc trưng bởi 4 tính chất chính sau:
+                <ul>
+                    <li><strong>Đóng gói (Encapsulation)</strong>: Là cách bảo vệ dữ liệu và chỉ cho phép truy cập thông qua các phương thức.</li>
+                    <li><strong>Kế thừa (Inheritance)</strong>: Là khả năng tạo ra một lớp mới từ một lớp đã có, kế thừa các đặc điểm của lớp cha.</li>
+                    <li><strong>Đa hình (Polymorphism)</strong>: Là khả năng sử dụng phương thức cùng tên nhưng với hành vi khác nhau tùy theo đối tượng gọi nó.</li>
+                    <li><strong>Trừu tượng (Abstraction)</strong>: Là việc ẩn đi chi tiết triển khai và chỉ cung cấp các phương thức để tương tác với đối tượng.</li>
+                </ul>
+            </p>
+            <hr>
+            <h3>Các Khái Niệm Quan Trọng trong OOP</h3>
+            <p>Dưới đây là các khái niệm cơ bản trong lập trình hướng đối tượng:</p>
+            <table>
+                <thead>
+                    <tr style="background-color: #dedede;">
+                        <th>Khái Niệm</th>
+                        <th>Mô Tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lớp (Class)</td>
+                        <td>Định nghĩa một kiểu dữ liệu, là bản thiết kế để tạo ra đối tượng.</td>
+                    </tr>
+                    <tr style="background-color: #dedede;">
+                        <td>Đối tượng (Object)</td>
+                        <td>Là một thực thể của lớp, chứa dữ liệu và phương thức thao tác với dữ liệu đó.</td>
+                    </tr>
+                    <tr>
+                        <td>Phương thức (Method)</td>
+                        <td>Là các hàm được định nghĩa trong lớp, thao tác với các thuộc tính của đối tượng.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h3>Ví Dụ Về Lập Trình Hướng Đối Tượng</h3>
+            <p>Đây là một ví dụ đơn giản về OOP trong ngôn ngữ Python:</p>
+            <div class="example-code">
+                <pre>
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def speak(self):
+        print(f"{self.name} says Woof!")
+
+dog1 = Dog("Buddy", 3)
+dog1.speak()
+                </pre>
+            </div>
+            <p>Trong ví dụ trên, lớp <strong>Dog</strong> có các thuộc tính như <strong>name</strong> và <strong>age</strong>, và phương thức <strong>speak</strong> để cho đối tượng "sủa".</p>
+
+            <hr>
+
+            <h3>Video Học Lập Trình Hướng Đối Tượng</h3>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/L-BabT96Zmk?si=FT5uGwHA3NL2jxfv" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Học lập trình hướng đối tượng là bước đi quan trọng để trở thành một lập trình viên chuyên nghiệp!</h4>
+    </footer>
+</body>
+
+</html>

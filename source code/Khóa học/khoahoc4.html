@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            color: #333;
+        }
+
+        /* css của phần nội dung */
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            /* Kiểu chữ hiện đại */
+            font-size: 3rem;
+            /* Kích thước chữ lớn hơn */
+            font-weight: bold;
+            /* Chữ đậm */
+            text-transform: uppercase;
+            /* Viết hoa */
+            letter-spacing: 3px;
+            /* Khoảng cách rộng giữa các chữ */
+            background: #069a32;
+            /* Hiệu ứng chuyển màu */
+            -webkit-background-clip: text;
+            /* Chỉ áp dụng gradient cho chữ */
+            -webkit-text-fill-color: transparent;
+            /* Làm chữ trong suốt để lộ gradient */
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            /* Đổ bóng */
+            animation: glow 2s infinite;
+            /* Hiệu ứng phát sáng */
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* css nút quay lại */
+        /* Nút quay lại */
+        .back-button {
+            top: 12%;
+            left: 10px;
+            /* Đặt phía bên trái */
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+            /* Màu khi hover */
+        }
+
+        /* css bảng */
+        table {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            margin-top: 20px;
+
+
+        }
+
+        h2 {
+
+            margin: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #0066cc;
+
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>JavaScript</h1>
+    </header>
+
+
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+
+            <h2>[Giới thiệu JavaScript]</h2>
+            <small>JavaScript là ngôn ngữ lập trình chạy trên browser, nhằm tạo khả năng tương tác với người
+                dùng.</small>
+            <hr>
+            <h3>JavaScript là gì?</h3>
+            <p>
+                JavaScript hay còn được viết tắt JS<br>
+                JavaScript là ngôn ngữ lập trình chạy trên browser, nhằm tạo khả năng tương tác với người dùng.<br>
+                Mỗi lệnh được kết thúc bằng dấu &quot ; &quot <br>
+                Có thể viết mã lệnh JavaScript trong thẻ &#60script&#62 của trang, hoặc viết riêng trong file script.js
+                rồi nhúng vào trang html, hoặc viết trực tiếp mã lệnh JavaScript trong phần sự kiện của các thẻ html<br>
+            </p>
+            <hr>
+            <h3>Sử dụng mã JavaScript vào trang</h3>
+            <p>
+                <li>Viết trực tiếp trong trang với thẻ &#60script&#62</li>
+            </p>
+            <p>
+                <li>Viết mã JavaScript trong file riêng </li>
+            </p>
+            <h4>1. Tạo file JavaScript</h4>
+            <p>
+                <li>Nhấp menu File -> New -> JavaScript -> Create </li>
+            </p>
+            <p>
+                <li>Gõ mã lệnh JavaScript</li>
+            </p>
+            <p>
+                <li>Lưu file với tên mở rộng là .js, ví dụ: chao.js</li>
+            </p>
+            <h4>Liên kết file js đến trang html</h4>
+            <p>
+                <li>Mở một file html</li>
+            </p>
+            <p>
+                <li>Nếu vị trí muốn chèn (thường trong thẻ &#60style&#62) rồi vào gỡ lệnh chèn</li>
+            </p>
+
+
+            <hr>
+            <p>Để nắm đầy đủ nội dung bạn có thể tham khảo ở dưới đay</p>
+            <center> <img src="../images/anhkhoahocjava.jfif"></center>
+            <hr>
+            <h3>Video học JavaScript từ A đến Z</h3>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/PkZNo7MFNFg?si=vn17M1dGSY2h6fpC"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+        </div>
+
+    </main>
+
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của
+            bạn
+            trong tương lai.</h4>
+    </footer>
+
+
+</body>
+
+</html>

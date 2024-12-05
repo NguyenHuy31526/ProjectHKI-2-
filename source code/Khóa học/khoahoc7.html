@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu Trúc Dữ Liệu</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            color: #333;
+        }
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;            
+            font-weight: bold;
+            text-transform: uppercase;           
+            letter-spacing: 3px;           
+            background: #069a32;
+            -webkit-background-clip: text;            
+            -webkit-text-fill-color: transparent;         
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: glow 2s infinite;            
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2em;
+        }
+        .back-button {
+            top: 12%;
+            left: 10px;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+        }
+        table {
+            margin: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #000000;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00509e;
+        }
+        h3 {
+            color: #00509e;
+        }
+        p {
+            text-indent: 20px;
+        }
+    </style>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>CẤU TRÚC DỮ LIỆU</h1>
+    </header>
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+            <h2>[GIỚI THIỆU CẤU TRÚC DỮ LIỆU]</h2><br>
+            <hr><br>
+            <h3>Cấu trúc dữ liệu là gì?</h3><br>
+            <h4>-Cấu trúc dữ liệu là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả.</h4>
+            <h4>-Dưới đây là hai khái niệm nền tảng hình thành nên một cấu trúc dữ liệu:</h4>
+            <p>+Interface: Mỗi cấu trúc dữ liệu có một Interface. Interface biểu diễn một tập hợp các phép tính mà một cấu trúc dữ liệu hỗ trợ. Một Interface chỉ cung cấp danh sách các phép tính được hỗ trợ, các loại tham số mà chúng có thể chấp nhận và kiểu trả về của các phép tính này.</p>
+            <p>+Implementation (có thể hiểu là sự triển khai): Cung cấp sự biểu diễn nội bộ của một cấu trúc dữ liệu. Implementation cũng cung cấp phần định nghĩa của giải thuật được sử dụng trong các phép tính của cấu trúc dữ liệu.</p>
+            <br><hr><br>
+            <h3>Tại sao Cấu trúc dữ liệu là cần thiết?</h3><br>
+            <h4>-Ngày nay, các ứng dụng ngày càng phức tạp và lượng dữ liệu ngày càng lớn với nhiều kiểu đa dạng. Việc này làm xuất hiện 3 vấn đề lớn mà mỗi lập trình viên phải đối mặt:</h4>
+            <p>+Tìm kiếm dữ liệu: Giả sử có 1 triệu hàng hóa được lưu giữ vào trong kho hàng hóa. Và giả sử có một ứng dụng cần để tìm kiếm một hàng hóa. Thì mỗi khi thực hiện tìm kiếm, ứng dụng này sẽ phải tìm kiếm 1 hàng hóa trong 1 triệu hàng hóa. Khi dữ liệu tăng lên thì việc tìm kiếm sẽ càng trở lên chậm và tốn kém hơn.</p>
+            <p>+Tốc độ bộ vi xử lý: Mặc dù bộ vi xử lý có tốc độ rất cao, tuy nhiên nó cũng có giới hạn và khi lượng dữ liệu lên tới hàng tỉ bản ghi thì tốc độ xử lý cũng sẽ không còn được nhanh nữa.</p>
+            <p>+Đa yêu cầu: Khi hàng nghìn người dùng cùng thực hiện một phép tính tìm kiếm trên một Web Server thì cho dù Web Server đó có nhanh đến mấy thì việc phải xử lý hàng nghìn phép tính cùng một lúc là thực sự rất khó.</p>
+            <h4>-Để xử lý các vấn đề trên, các cấu trúc dữ liệu là một giải pháp tuyệt vời. Dữ liệu có thể được tổ chức trong cấu trúc dữ liệu theo một cách để khi thực hiện tìm kiếm một phần tử nào đó thì dữ liệu yêu cầu sẽ được tìm thấy ngay lập tức.</h4>
+            <br><hr><br>
+            <h3>Các loại cấu trúc dữ liệu:</h3><br>
+            <h4>-Mảng – Array:</h4> 
+            <p>+Mảng là một tập hợp các mục tại vị trí bộ nhớ nhớ liền kề. Khi đó để có thể truy xuất vị trí của từng dữ liệu một cách dễ dàng thì các mục cùng loại sẽ được lưu trữ với nhau. Mảng lưu trữ có thể có chiều dài linh hoạt hoặc cố định.</p>
+            <h4>-Ngăn xếp – Stacks</h4>
+            <p>+Ngăn xếp là một tập hợp các mục theo thứ tự tuyến tính mà các phép toán được thực hiện. Thứ tự tuyến tính này có thể là nhập trước xuất (FIFO) hoặc xuất trước nhập (LIFO).</p>
+            <h4>-Non – Homogeneous:</h4>
+            <p>+Danh sách liên kết là một bộ sưu tập các mục dữ liệu theo thứ tự tuyến tính. Mỗi nút hoặc phần tử trong danh sách được liên kết chứa một mục dữ liệu trong danh sách.</p>
+            <h4>-Cây - Trees:</h4>
+            <p>+Cây lưu trữ là một bộ sưu tập các mục dữ liệu theo phân cấp, trừu tượng và có thứ bậc. Một phần tử được liên kết với các phần tử khác và có thể thêm giá trị phụ.</p>
+            <h4>-Đồ thị – Graphs:</h4>
+            <p>+Đồ thị lưu trữ là một bộ sưu tập các mục dữ liệu theo kiểu phi tuyến tính. Nó được tạo thành từ tập hợp hữu hạn các phần tử hoặc nút (các đỉnh) và các đường nối chúng (các cạnh).</p>
+            <h4>-Cây tìm kiếm – Tries:</h4>
+            <p>+Cây tìm kiếm là một cấu trúc lưu trữ các chuỗi dưới dạng các mục dữ liệu có thể được tổ chức trong một đồ thị trực tiếp.</p>
+            <h4>-Bảng băm – Hash tables:</h4>
+            <p>+Bản đồ băm hay bảng băm lưu trữ một bộ sưu tập các mục trong một mảng để vẽ các khóa cho giá trị. Nó sử dụng hàm băm để chuyển một chỉ mục thành một mảng các nhóm chứa dữ liệu mong muốn.</p>
+            <br><hr><br>
+            <h3>Các chương trong khóa học</h3><br>
+            <h4>-Chương 1: Giới thiệu</h4>
+            <p>+Kiểu dữ liệu</p>
+            <p>+Cấu trúc dữ liệu</p>
+            <p>+Cấu trúc dữu liệu trừu tượng(ADT)</p>
+            <p>+Nguyên tắc xây dựng cấu trúc dữ liệu</p>
+            <h4>-Chương 2: Thuật toán tìm kiếm – sắp xếp</h4>
+            <p>+Bài toán Tìm kiếm</p>
+            <p>+Các thuật toán tìm kiếm</p>
+            <p>+Bài toán Sắp xếp</p>
+            <p>+Các thuật toán sắp xếp</p>
+            <p>+Bài tập</p>
+            <h4>-Chương 3: Cấu trúc danh sách</h4>
+            <p>+Khái niệm</p>
+            <p>+Phân loại danh sách</p>
+            <p>+cài đặt danh sách đặt</p>
+            <p>+cài đặt danh sách liên kết đơn</p>
+            <p>+Bài tập</p>
+            <h4>-Chương 4: Ngăn xếp – hàng đợi</h4>
+            <p>+Ngăn xếp</p>
+            <p>+Hàng đợi</p>
+            <p>+Bài tập</p>
+            <h4>-Chương 5: Cấu trúc cây</h4>
+            <p>+Định nghĩa và tính chất chung</p>
+            <p>+Cây nhị phân</p>
+            <p>+Cây nhị phân tìm kiếm</p>
+            <p>+Cây nhị phân tìm kiếm cân bằng</p>
+            <p>+Bài tập</p>
+            <h4>-Chương 6: Cấu trúc bảng băm</h4>
+            <p>+Định nghĩa</p>
+            <p>+Các phương pháp xây dựng hàm băm</p>
+            <p>+Các loại bảng băm và phương pháp giải quyết đụng độ</p>
+            <p>+Bài tập</p>
+            <br><hr><br>
+            <h3>Video học Cấu trúc dữ liệu từ A đến Z</h3><br>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/8hly31xKli0?si=-d1y9F8gdgbN-kBP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của
+            bạn
+            trong tương lai.</h4>
+    </footer>
+</body>
+</html>

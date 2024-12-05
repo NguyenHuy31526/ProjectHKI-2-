@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toán rời rạc</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            color: #333;
+        }
+
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: #069a32;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: glow 2s infinite;
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        .back-button {
+            top: 12%;
+            left: 10px;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+        }
+
+        table {
+            margin: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #000000;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00509e;
+        }
+
+        h3 {
+            color: #00509e;
+        }
+
+        p {
+            text-indent: 20px;
+        }
+    </style>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>TOÁN RỜI RẠC</h1>
+    </header>
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+            <h2>[GIỚI THIỆU TOÁN RỜI RẠC]</h2><br>
+            <hr><br>
+            <h3>Toán rời rạc là gì?</h3><br>
+            <h4>-Toán học rời rạc (tiếng Anh: discrete mathematics) là tên chung của nhiều ngành toán học có đối tượng
+                nghiên cứu là các tập hợp rời rạc, các ngành này được tập hợp lại từ khi xuất hiện khoa học máy tính làm
+                thành cơ sở toán học của khoa học máy tính. Nó còn được gọi là toán học dành cho máy tính. Người ta
+                thường kể đến trong toán học rời rạc lý thuyết tổ hợp, lý thuyết đồ thị, lý thuyết độ phức tạp, đại số
+                Boole.</h4>
+            <h4>-Một quan điểm rộng rãi hơn, gộp tất cả các ngành toán học làm việc với các tập hữu hạn hoặc đếm được
+                vào toán học rời rạc như số học modulo m, lý thuyết nhóm hữu hạn, lý thuyết mật mã,...</h4><br>
+            <hr><br>
+            <h3>Ứng dụng của Toán rời rạc</h3><br>
+            <h4>-Khoa học máy tính:</h4>
+            <p>+Lý thuyết đồ thị: Toán rời rạc là nền tảng của lý thuyết đồ thị, dùng để mô hình hóa và giải quyết các
+                vấn đề liên quan đến mạng lưới (ví dụ: mạng máy tính, mạng xã hội, các tuyến đường giao thông). Các
+                thuật toán như tìm đường đi ngắn nhất (Dijkstra), thuật toán tìm cây khung tối thiểu (Kruskal, Prim) đều
+                được xây dựng trên lý thuyết đồ thị.</p>
+            <p>+Thuật toán và tối ưu hóa: Các thuật toán tìm kiếm, sắp xếp, phân loại, và tối ưu hóa được xây dựng trên
+                các khái niệm toán học của toán rời rạc, như lý thuyết số học, lý thuyết đồ thị, lý thuyết xác suất.</p>
+            <p>+Mã hóa thông tin: Các kỹ thuật mã hóa và giải mã thông tin, như mã hóa Hamming, mã hóa tuyến tính, mã
+                hóa Huffman, đều liên quan đến lý thuyết nhóm và lý thuyết mã.</p>
+            <h4>-Mạng máy tính và viễn thông:</h4>
+            <p>+Lý thuyết đồ thị và mạng: Trong mạng máy tính, các vấn đề như tối ưu hóa đường truyền, phân phối tài
+                nguyên, đảm bảo an toàn thông tin, đều được giải quyết bằng các phương pháp toán rời rạc.</p>
+            <p>+Mã hóa và bảo mật thông tin: Toán rời rạc đóng vai trò quan trọng trong việc bảo mật thông tin qua mã
+                hóa, xác thực, và phân phối khóa mã.</p>
+            <h4>-Hệ thống và công nghệ phần cứng:</h4>
+            <p>+Thiết kế mạch số: Các mạch số, được sử dụng trong máy tính và các thiết bị điện tử khác, dựa trên các
+                khái niệm toán rời rạc như logic boolean và các hàm số.</p>
+            <p>+Kiến trúc máy tính: Các cấu trúc dữ liệu và thuật toán sử dụng trong việc tối ưu hóa bộ nhớ và xử lý dữ
+                liệu thường xuyên dựa trên các khái niệm từ toán rời rạc.</p>
+            <h4>-Khoa học dữ liệu và trí tuệ nhân tạo:</h4>
+            <p>+Học máy: Các thuật toán học máy, đặc biệt là trong lĩnh vực phân loại và cụm dữ liệu, thường sử dụng các
+                kỹ thuật toán rời rạc như cây quyết định, thuật toán tối ưu hóa.</p>
+            <p>+Xử lý ngữ nghĩa và ngôn ngữ tự nhiên: Toán rời rạc đóng vai trò quan trọng trong các mô hình chuỗi, mạng
+                ngữ nghĩa, và trong việc xử lý các dữ liệu văn bản.</p>
+            <h4>-Toán học ứng dụng:</h4>
+            <p>+Lý thuyết xác suất và thống kê: Toán rời rạc giúp xây dựng các mô hình xác suất rời rạc (ví dụ: phân
+                phối Bernoulli, phân phối Poisson), rất hữu ích trong việc mô hình hóa các sự kiện ngẫu nhiên.</p>
+            <p>+Lý thuyết trò chơi: Toán rời rạc được sử dụng để mô hình hóa và giải quyết các trò chơi chiến lược, như
+                lý thuyết game (game theory), đặc biệt trong các tình huống có chiến lược đối kháng.</p>
+            <h4>-Kinh tế và quản lý:</h4>
+            <p>+Quản lý chuỗi cung ứng: Toán rời rạc được sử dụng trong việc tối ưu hóa các chuỗi cung ứng, quyết định
+                chiến lược phân phối và tối ưu hóa kho bãi.</p>
+            <p>+Lý thuyết quyết định: Các mô hình toán rời rạc giúp phân tích các quyết định trong tình huống có nhiều
+                lựa chọn và rủi ro không chắc chắn.</p>
+            <h4>-Lý thuyết mã hóa và bảo mật:</h4>
+            <p>+Mã hóa công khai: Các hệ thống mã hóa công khai, như RSA, DSA, và các hệ thống khóa bất đối xứng, đều sử
+                dụng lý thuyết số học và các khái niệm toán học rời rạc.</p>
+            <p>+Xác thực và bảo vệ dữ liệu: Các thuật toán bảo mật như SHA, RSA, và các hệ thống xác thực sử dụng toán
+                học rời rạc để bảo vệ và mã hóa dữ liệu.</p>
+            <h4>-Kỹ thuật phần mềm và kiểm thử phần mềm:</h4>
+            <p>+Mô phỏng và mô hình hóa hệ thống: Toán rời rạc được sử dụng trong các mô phỏng và mô hình hóa phần mềm,
+                đặc biệt là trong các lĩnh vực như kiểm thử phần mềm, xác minh tính đúng đắn của thuật toán.</p><br>
+            <hr><br>
+            <h3>Làm thế nào để học tốt Toán rời rạc?</h3><br>
+            <h4>-Để học tốt môn toán rời rạc, bạn cần có một phương pháp học tập hợp lý và kiên trì. Dưới đây là một số
+                cách:</h4>
+            <p>+Hiểu rõ các khái niệm cơ bản: tập hợp và phép toán trên tập hợp, logic toán học, đồ thị,...</p>
+            <p>+Chăm chỉ luyện tập giả bài tập: giải các bài tập giáo trình, mở rộng thêm bài tập tìm trên các tài liệu
+                và internet</p>
+            <p>+Học với nguồn tài liệu phong phú: internet,...</p>
+            <p>+Học theo nhóm hoặc tham gia cộng đồng.</p>
+            <p>+Làm quen với các dạng bài thực tế.</p>
+            <p>+Kiên trì và kiên nhẫn.</p><br>
+            <hr><br>
+            <h3>Các chương trong khóa học</h3><br>
+            <h4>-Chương 1: Đại số mệnh đề, tập hợp, ánh xạ</h4>
+            <p>+Đại số mệnh đề</p>
+            <p>+Tập hợp</p>
+            <p>+Ánh xạ</p>
+            <h4>-Chương 2: Phương pháp đếm</h4>
+            <p>+Phép đếm</p>
+            <p>Giải thích tổ hợp</p>
+            <p>Nguyên lý Dirichlet</p>
+            <h4>-Chương 3: Quan hệ 2 ngôi</h4>
+            <p>+Quan hệ hai ngôi và ma trận biểu diễn</p>
+            <p>+Các tính chất của quan hệ hai ngôi</p>
+            <p>+Quan hệ thứ tự</p>
+            <p>+Quan hệ tương đương</p>
+            <h4>-Chương 4: Đại số Boole và hàm Boole</h4>
+            <p>+Đại số Bool</p>
+            <p>+Hàm Boole</p>
+            <p>+Phương pháp biểu đồ Kamaugh</p>
+            <p>+Rút gọn hàm Boole</p>
+            <p>+Phương pháp biểu đồ Kamaugh tìm công thức đa thức tối thiểu</p>
+            <h4>-Chương 5: Thuật toán – Đánh giá độ phức tạp của thuật toán</h4>
+            <p>+Khái niệm thuật toán – Khái niệm độ phức tạp</p>
+            <p>+Hệ thức đệ qui – Phương trình sai phân</p>
+            <p>+Phương pháp sai phân thuần nhất</p>
+            <p>+Phương pháp sai phân không thuần nhất</p>
+            <p>+Áp dụng</p><br>
+            <hr><br>
+            <h3>Video học Toán rời rạc từ A đến Z</h3><br>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/rdXw7Ps9vxc?si=aJ1NdzgahmQuar_e"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của
+            bạn
+            trong tương lai.</h4>
+    </footer>
+</body>
+
+</html>

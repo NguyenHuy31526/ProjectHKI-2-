@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: #069a32;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            animation: glow 2s infinite;
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .menu {
+            width: 200px;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ccc;
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu li:hover {
+            background-color: #e0e0e0;
+        }
+
+        .menu li.active {
+            background-color: #b0e1ff;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content>div {
+            display: none;
+        }
+
+        .content>div.active {
+            display: block;
+        }
+
+        footer {
+            padding: 30px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #d9e6f2;
+            text-align: center;
+        }
+           /* Phần đăng nhập */
+           .login-container {
+                    background-color: #fff;
+                    padding: 40px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                    max-width: 400px;
+                    width: 100%;
+                    text-align: center;
+                    margin: 30px auto;
+                }
+        
+                .login-title {
+                    font-size: 24px;
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+        
+                .input-group {
+                    margin-bottom: 20px;
+                    text-align: left;
+                }
+        
+                .input-group input {
+                    width: 100%;
+                    padding: 12px;
+                    font-size: 16px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    transition: border 0.3s ease;
+                }
+        
+                .input-group input:focus {
+                    border-color: #00509e;
+                    outline: none;
+                }
+        
+                .submit-button {
+                    background-color: #00509e;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, transform 0.3s ease;
+                    width: 100%;
+                }
+        
+                .submit-button:hover {
+                    background-color: #003d7a;
+                    transform: translateY(-2px);
+                }
+        
+                .submit-button:active {
+                    transform: translateY(2px);
+                }
+        
+                /* Phần liên hệ */
+                .contact-container {
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                    max-width: 400px;
+                    width: 100%;
+                    text-align: center;
+                    margin: 30px auto;
+                    margin-top: 50px; /* Để tạo khoảng cách với phần đăng nhập */
+                }
+        
+                .contact-title {
+                    font-size: 20px;
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+        
+                .contact-info {
+                    font-size: 16px;
+                    color: #555;
+                    margin-bottom: 10px;
+                }
+
+                #upload {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        }
+
+        #upload h2 {
+            margin-bottom: 20px;
+        }
+
+        #upload label {
+            font-weight: bold;
+        }
+
+        #upload textarea,
+        #upload input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #upload button {
+            background-color: #00509e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #upload button:hover {
+            background-color: #228b91;
+        }
+        #upload select,
+        #upload input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #upload label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>Admin</h1>
+    </header>
+
+    <div class="main-container">
+        <ul class="menu">
+            <li class="active" data-target="section1" onclick="showContent('section1')">Đăng nhập admin</li>
+            <li data-target="section2" onclick="showContent('section2')">Quản lý tài khoản</li>
+            <li data-target="section3" onclick="showContent('section3')">Thêm tài liệu</li>
+            <li data-target="section4" onclick="showContent('section4')">Thêm bài tập</li>
+            <li><a href="../Trangchu2.html">Thoát</a> </li>
+        </ul>
+
+        <main class="content">
+            <div id="section1" class="active">
+
+
+
+
+                <!-- hợp viết code vô đây -->
+
+                <div id="section1" class="login-container">
+                  <h2 class="login-title">Đăng nhập Admin</h2>
+                  <form action="your-login-script.php" method="POST">
+                      <div class="input-group">
+                          <label for="username" class="label">Tên đăng nhập:</label>
+                          <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required class="input-field">
+                      </div>
+                      <div class="input-group">
+                          <label for="password" class="label">Mật khẩu:</label>
+                          <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required class="input-field">
+                      </div>
+                      <div class="button-container">
+                          <button type="submit" class="submit-button">Đăng nhập</button>
+                      </div>
+                  </form>
+              </div>
+      
+              <!-- Phần liên hệ -->
+              <div class="contact-container">
+                  <h3 class="contact-title">Thông tin liên hệ</h3>
+                  <p class="contact-info">Địa chỉ:  280 Đ. An Dương Vương, Phường 4, Quận 5, Hồ Chí Minh</p>
+                  <p class="contact-info">Số điện thoại: 0949874565</p>
+                  <p class="contact-info">Hỗ trợ học tập 3HKT</p>
+              </div>
+
+
+
+            </div>
+            <div id="section2">
+
+
+
+
+                <!-- khang viết code vô đây -->
+
+                <form>
+                    <table cellpadding="40" cellspacing="40">
+                      <tr>
+                        <td>
+                          <label
+                            for="loai-tai-khoan"
+                            style="font-weight: bold; font-size: 16px"
+                            >Loại tài khoản:</label
+                          >
+                        </td>
+                        <td>
+                          <select
+                            id="loai-tai-khoan"
+                            name="loai-tai-khoan"
+                            style="width: 300px; padding: 5px"
+                          >
+                            <option>Quản trị viên</option>
+                            <option>Giáo viên</option>
+                            <option>Sinh viên</option>
+                            <!-- Ko biết thêm j ở đây -->
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label
+                            for="ten-tai-khoan"
+                            style="font-weight: bold; font-size: 16px"
+                            >Tên tài khoản:</label
+                          >
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            id="ten-tai-khoan"
+                            name="ten-tai-khoan"
+                            required
+                            style="width: 100%; padding: 8px"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="ho-ten" style="font-weight: bold; font-size: 16px"
+                            >Họ tên:</label
+                          >
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            id="ho-ten"
+                            name="ho-ten"
+                            required
+                            style="width: 100%; padding: 8px"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label
+                            for="mat-khau"
+                            style="font-weight: bold; font-size: 16px"
+                            >Mật khẩu:</label
+                          >
+                        </td>
+                        <td>
+                          <input
+                            type="password"
+                            id="mat-khau"
+                            name="mat-khau"
+                            required
+                            style="width: 100%; padding: 8px"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label
+                            for="nhap-lai-mat-khau"
+                            style="font-weight: bold; font-size: 16px"
+                            >Nhập lại mật khẩu:</label
+                          >
+                        </td>
+                        <td>
+                          <input
+                            type="password"
+                            id="nhap-lai-mat-khau"
+                            name="nhap-lai-mat-khau"
+                            required
+                            style="width: 100%; padding: 8px"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Quyền hạn:</td>
+                        <td>
+                          <fieldset>
+                            <table>
+                              <tr>
+                                <!-- Cột 1 -->
+                                <td style="padding: 10px">
+                                  
+        
+                                  <input
+                                    type="checkbox"
+                                    id="bai-viet"
+                                    name="quyen-han"
+                                    value="bai-viet"
+                                  />
+                                  <label for="bai-viet">Bài viết</label><br />
+        
+                                 
+        
+                                  <input
+                                    type="checkbox"
+                                    id="san-pham"
+                                    name="quyen-han"
+                                    value="san-pham"
+                                  />
+                                  <label for="san-pham">Sản phẩm</label><br />
+                                </td>
+                                <!-- Cột 2 -->
+                                <td style="padding: 10px">
+                                 
+                                  <input
+                                    type="checkbox"
+                                    id="hinh-anh"
+                                    name="quyen-han"
+                                    value="hinh-anh"
+                                  />
+                                  <label for="hinh-anh">Hình ảnh</label><br />
+        
+                                  <input
+                                    type="checkbox"
+                                    id="ho-tro-truc-tuyen"
+                                    name="quyen-han"
+                                    value="ho-tro-truc-tuyen"
+                                  />
+                                  <label for="ho-tro-truc-tuyen"
+                                    >Hỗ trợ trực tuyến</label
+                                  ><br />
+        
+                                  <input
+                                    type="checkbox"
+                                    id="video"
+                                    name="quyen-han"
+                                    value="video"
+                                  />
+                                  <label for="video">Video</label><br />
+                                </td>
+                                <!-- Cột 3 -->
+                                <td style="padding: 10px">
+                                  <input
+                                    type="checkbox"
+                                    id="quan-tri-thong-tin"
+                                    name="quyen-han"
+                                    value="quan-tri-thong-tin"
+                                  />
+                                  <label for="quan-tri-thong-tin"
+                                    >Quản trị thông tin</label
+                                  ><br />
+        
+                                 
+        
+                                  <input
+                                    type="checkbox"
+                                    id="khach-hang-lien-he"
+                                    name="quyen-han"
+                                    value="khach-hang-lien-he"
+                                  />
+                                  <label for="khach-hang-lien-he"
+                                    >Khách hàng Liên hệ</label
+                                  ><br />
+        
+                                  <input
+                                    type="checkbox"
+                                    id="danh-sach-dien-thoai"
+                                    name="quyen-han"
+                                    value="danh-sach-dien-thoai"
+                                  />
+                                  <label for="danh-sach-dien-thoai"
+                                    >Danh sách Điện thoại</label
+                                  ><br />
+                                </td>
+                                
+                              </tr>
+                            </table>
+                          </fieldset>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="text-align: center; color: blue">
+                          <button
+                            type="submit"
+                            style="
+                              padding: 10px 20px;
+                              background-color: #2196f3;
+                              color: white;
+                              border: none;
+                              border-radius: 5px;
+                            "
+                          >
+                            Lưu
+                          </button>
+                          <button
+                            type="button"
+                            style="
+                              padding: 10px 20px;
+                              background-color: #2196f3;
+                              color: white;
+                              border: none;
+                              border-radius: 5px;
+                            "
+                          >
+                            Thoát
+                          </button>
+                          <button
+                            type="reset"
+                            style="
+                              padding: 10px 20px;
+                              background-color: #2196f3;
+                              color: white;
+                              border: none;
+                              border-radius: 5px;
+                            "
+                          >
+                            Reset
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+
+                
+
+
+
+            </div>
+            <div id="section3">
+
+
+                <!-- hòa viết code vô đây -->
+
+                <div id="upload">
+                  <h2>Thêm tài liệu</h2>
+                  <form action="/upload" method="POST" enctype="multipart/form-data">
+                      <label for="material">Chọn tài liệu để tải lên:</label>
+                      <input type="file" id="material" name="material" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" required>
+                      <br><br>
+                      
+                      <label for="author">Tác giả:</label>
+                      <input type="text" id="author" name="author" placeholder="Enter the author's name" required>
+                      <br><br>
+                      
+                      <label for="type">Loại tài liệu:</label>
+                      <select id="type" name="type" required>
+                          <option value="">Kiểu tài liệu</option>
+                          <option value="free">Miễn phí</option>
+                          <option value="">Tốn phí</option>
+                          <option value="Lever">Mở khoá theo cấp độ</option>
+                          <option value="other">Khác</option>
+                      </select>
+                      <br><br>
+                      
+                      <label for="description">Miêu tả:</label>
+                      <textarea id="description" name="description" rows="4" cols="50" placeholder="Miêu tả về tài liệu..." required></textarea>
+                      <br><br>
+                      
+                      <button type="submit">Upload</button>
+                  </form>
+              </div>
+
+
+
+
+
+
+
+            </div>
+            <div id="section4">
+
+
+
+
+
+                <!-- hòa viết code vô đây -->
+                <div id="upload">
+                  <h2>Thêm bài tập</h2>
+                  <form action="/upload" method="POST" enctype="multipart/form-data">
+                      <label for="material">Chọn bài tập để tải thêm:</label>
+                      <input type="file" id="material" name="material" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" required>
+                      <br><br>
+                      
+                      <label for="author">Tác giả:</label>
+                      <input type="text" id="author" name="author" placeholder="Tên tác giả" required>
+                      <br><br>
+                      
+                      <label for="type">Loại bài tập:</label>
+                      <select id="type" name="type" required>
+                          <option value="">CSS3</option>
+                          <option value="html5">HTML5</option>
+                          <option value="javascript">JavaScript</option>
+                          <option value="cosodulieu">Cơ sở dữ liệu</option>
+                          <option value="other">Khác</option>
+                      </select>
+                      <br><br>
+                      
+                      <label for="description">Miêu tả:</label>
+                      <textarea id="description" name="description" rows="4" cols="50" placeholder="Miêu tả về bài tập..." required></textarea>
+                      <br><br>
+                      
+                      <button type="submit">Upload</button>
+                  </form>
+
+              </div>
+              <!-- hòa viết code vô đây -->
+          
+
+
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <h4>Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của bạn trong tương lai.</h4>
+    </footer>
+
+    <script>
+        function showContent(id) {
+            const sections = document.querySelectorAll('.content > div');
+            const menuItems = document.querySelectorAll('.menu li');
+
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            document.getElementById(id).classList.add('active');
+            document.querySelector(`[data-target="${id}"]`).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

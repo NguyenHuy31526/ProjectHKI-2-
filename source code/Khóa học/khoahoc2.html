@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTLM5</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            color: #333;
+        }
+
+        /* css của phần nội dung */
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            /* Kiểu chữ hiện đại */
+            font-size: 3rem;
+            /* Kích thước chữ lớn hơn */
+            font-weight: bold;
+            /* Chữ đậm */
+            text-transform: uppercase;
+            /* Viết hoa */
+            letter-spacing: 3px;
+            /* Khoảng cách rộng giữa các chữ */
+            background: #069a32;
+            /* Hiệu ứng chuyển màu */
+            -webkit-background-clip: text;
+            /* Chỉ áp dụng gradient cho chữ */
+            -webkit-text-fill-color: transparent;
+            /* Làm chữ trong suốt để lộ gradient */
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            /* Đổ bóng */
+            animation: glow 2s infinite;
+            /* Hiệu ứng phát sáng */
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* css nút quay lại */
+        /* Nút quay lại */
+        .back-button {
+            top: 12%;
+            left: 10px;
+            /* Đặt phía bên trái */
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+            /* Màu khi hover */
+        }
+
+        /* css bảng */
+        table {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            margin-top: 20px;
+
+
+        }
+
+        h2 {
+
+            margin: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #0066cc;
+
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>HTML5</h1>
+    </header>
+
+
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+
+            <h2>[Giới thiệu HTML]</h2>
+            <small>HTML là ngôn ngữ đánh dấu chuẩn để tạo trang web.</small>
+            <hr>
+            <h3>HTML là gì?</h3>
+            <p>
+                HTML là viết tắt của Hyper Text Markup Language<br>
+                HTML là ngôn ngữ đánh dấu chuẩn để tạo ra các trang Web<br>
+                HTML mô tả cấu trúc của một trang Web<br>
+                HTML bao gồm một loạt các phần tử<br>
+                Các thành phần HTML cho trình duyệt biết cách hiển thị nội dung<br>
+                Các phần tử HTML gắn nhãn cho các phần nội dung như "đây là tiêu đề", "đây là đoạn văn", "đây là liên
+                kết",
+                v.v.
+            </p>
+            <hr>
+            <h3> Phần tử HTML là gì?</h3>
+            <p>
+                Một phần tử HTML được xác định bởi một thẻ bắt đầu, một số nội dung và một thẻ kết thúc:<br>
+
+                &#60 tagname &#62 Nội dung ở đây ... &#60 /tagname &#62<br>
+                <b>Phần tử</b> HTML bao gồm mọi thứ từ thẻ bắt đầu đến thẻ kết thúc:<br>
+
+                &#60 h1 &#62 Tiêu đề đầu tiên của tôi &#60 /h1 &#62<br>
+                &#60 p &#62 Đoạn văn đầu tiên của tôi. &#60 / p &#62
+            </p>
+            <table>
+                <thead>
+                    <tr style="background-color: #dedede;">
+                        <th>Start tag</th>
+                        <th>Element content</th>
+                        <th>End tag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> &#60 h1 &#62</td>
+                        <td>My First Heading</td>
+                        <td>&#60 /h1 &#62</td>
+                    </tr>
+                    <tr style="background-color: #dedede;">
+                        <td> &#60 p &#62</td>
+                        <td>My first paragraph.</td>
+                        <td>&#60 /p &#62</td>
+                    </tr>
+                    <tr>
+                        <td> &#60 br &#62</td>
+                        <td>none</td>
+                        <td>none</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <hr>
+
+            <h3> Trình duyệt web</h3>
+            <p>Mục đích của trình duyệt web (Chrome, Edge, Firefox, Safari) là đọc tài liệu HTML và hiển thị chúng một
+                cách
+                chính xác.</p>
+
+            <p>Trình duyệt không hiển thị thẻ HTML nhưng sử dụng chúng để xác định cách hiển thị tài liệu:</p>
+            
+            <hr>
+            <h3>Video học HTML5 từ A đến Z</h3>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/mJgBOIoGihA?si=y6tTtpW_PznB5PMr"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+        </div>
+
+    </main>
+
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của
+            bạn
+            trong tương lai.</h4>
+    </footer>
+
+
+</body>
+
+</html>

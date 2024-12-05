@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            color: #333;
+        }
+
+        /* css của phần nội dung */
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            /* Kiểu chữ hiện đại */
+            font-size: 3rem;
+            /* Kích thước chữ lớn hơn */
+            font-weight: bold;
+            /* Chữ đậm */
+            text-transform: uppercase;
+            /* Viết hoa */
+            letter-spacing: 3px;
+            /* Khoảng cách rộng giữa các chữ */
+            background: #069a32;
+            /* Hiệu ứng chuyển màu */
+            -webkit-background-clip: text;
+            /* Chỉ áp dụng gradient cho chữ */
+            -webkit-text-fill-color: transparent;
+            /* Làm chữ trong suốt để lộ gradient */
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            /* Đổ bóng */
+            animation: glow 2s infinite;
+            /* Hiệu ứng phát sáng */
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* css nút quay lại */
+        /* Nút quay lại */
+        .back-button {
+            top: 12%;
+            left: 10px;
+            /* Đặt phía bên trái */
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+            /* Màu khi hover */
+        }
+
+        /* css bảng */
+        table {
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            margin-top: 20px;
+
+
+        }
+
+        h2 {
+
+            margin: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #0066cc;
+
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>CSS3</h1>
+    </header>
+
+
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+
+            <h2>[Giới thiệu CSS]</h2>
+            <small>CSSS là một kỹ thuật dùng để định dạng các thẻ trong trang web</small>
+            <hr>
+            <h3>CSS là gì?</h3>
+            <p>
+                CSS là viết tắt của Cascading Style Sheets<br>
+                CSS mô tả cách các phần tử HTML sẽ hiển thị trên màn hinh, trang web hoặc các phương tiện khác<br>
+                CSS giúp định dạng trang web rất nhanh nhờ nhiều kiểu định dạng tag, class, element,...<br>
+
+                <hr>
+            <h3>Lợi ích của CSS</h3>
+            <p>
+                <li>Dễ quản lý, bao trì</li><br>
+
+                <li>Tái sử dụng. Một quy luật kiểu dáng có thể áp dụng cho nhiều thành phần web khác nhau</li><br>
+                <li>Cải thiện tốc độ</li><br>
+            </p>
+
+
+            <hr>
+
+            <h3>Thẻ Style</h3>
+            <p>Là một tập hợp các đặc điểm nhận dạng cho thành các thành phần trong trang</p>
+            <p>Để định dạng, ta chuyển sang chế độ code, rồi định nghĩa các stlye bên trong thẻ &#60style&#62 </p>
+            <P>Sau đây là mã nguồn của một số màu sắc giúp bạn trang trí</P>
+            <center> <img src="../images/bangmaukhoa3.jpg"></center>
+            <hr>
+            <h3>Nhúng CSS vào trang web</h3>
+            <p>Có 3 cách để nhúng mã CSS vào trong một tài liệu HTML:</p>
+            <p>
+                <li> Khai báo trực tiếp ở thẻ HTML (Inline stle) </li>
+            </p>
+            <p>
+                <li> Khai báo thẻ &#60style&#62 trong phần thẻ &#60head&#62 của phần HTML (Internal style) </li>
+            </p>
+            <p>
+                <li> Khai báo trong file .css riêng biệt (External style) </li>
+            </p>
+            <h3>Video học HTML5 từ A đến Z</h3>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/R6plN3FvzFY?si=QJC4WMJCnpEc6yRo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+        </div>
+
+    </main>
+
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của
+            bạn
+            trong tương lai.</h4>
+    </footer>
+
+
+</body>
+
+</html>

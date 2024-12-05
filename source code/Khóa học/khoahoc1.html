@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            color: #333;
+        }
+
+        /* css của phần nội dung */
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            /* Kiểu chữ hiện đại */
+            font-size: 3rem;
+            /* Kích thước chữ lớn hơn */
+            font-weight: bold;
+            /* Chữ đậm */
+            text-transform: uppercase;
+            /* Viết hoa */
+            letter-spacing: 3px;
+            /* Khoảng cách rộng giữa các chữ */
+            background: #069a32;
+            /* Hiệu ứng chuyển màu */
+            -webkit-background-clip: text;
+            /* Chỉ áp dụng gradient cho chữ */
+            -webkit-text-fill-color: transparent;
+            /* Làm chữ trong suốt để lộ gradient */
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+            /* Đổ bóng */
+            animation: glow 2s infinite;
+            /* Hiệu ứng phát sáng */
+            position: relative;
+            display: inline-block;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #89c2fb, #228b91, #00509e);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* css nút quay lại */
+        /* Nút quay lại */
+        .back-button {
+            top: 12%;
+            left: 10px;
+            /* Đặt phía bên trái */
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #003f8c;
+            /* Màu khi hover */
+        }
+
+        /* css bảng */
+        table {
+            margin: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #000000;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+    <header>
+        <div class="logo-text">
+            <pre>3HKT   </pre>
+        </div>
+        <h1>[C++]</h1>
+    </header>
+
+
+    <a href="../Trangchu2.html" class="back-button">Quay Lại</a>
+    <main>
+        <div id="section1" class="content-section">
+            <h2>Vì Sao Nên Học Lập Trình C++</h2>
+            <p style="margin: 20px;">Ngôn ngữ lập trình C++ là ngôn ngữ lập trình rất phổ biến và có nhiêu ưu điểm, bài
+                viết này mình sẽ nêu
+                ra các lý do bạn nên học lập trình C++<br>
+
+                Như các bạn biết thì ngôn ngữ lập trình chỉ là công cụ của lập trình viên, nó không thể giúp bạn kiếm
+                được một công việc mà chỉ có kiến thức về một ngôn ngữ lập trình. Hiện nay có quá nhiều ngôn ngữ lập
+                trình, bạn có thể nghe tới những ngôn ngữ được nhiều người nhắc đến như : C/C++, Python, PHP, Java,
+                Javascript, Go-lang, Solidity... </p>
+
+
+
+            <h3 style="color: #0066cc; margin-top: 20px;">Ngôn ngữ lập trình C++ là ngôn ngữ nền tảng </h3>
+            <p style="margin: 20px;">Khi bắt đầu học lập trình bạn thường được người ta khuyên học lập trình C/C++ đầu
+                tiên, thực tế đây là 2
+                ngôn ngữ lập trình khác nhau nhưng thường được nhắc cùng nhau. Cả C và C++ đều là ngôn ngữ lập trình nền
+                tảng, thành thạo 2 ngôn ngữ này bạn có thể học các ngôn ngữ lập trình khác nhanh hơn. C++ có thể coi là
+                phiên bản mở rộng của C với nhiều tính năng, thư viện, thuật toán mạnh mẽ hơn. Việc bắt đầu học lập
+                trình bạn có thể dùng C hoặc C++ nhưng nếu không bắt buộc phải học C (ví dụ trường đại học của bạn không
+                yêu cầu) thì bạn nên học C++ ngay từ đầu.</p>
+
+            <h3 style="color: #0066cc;">Ngôn ngữ lập trình C++ dễ tiếp cận với người mới </h3>
+            <p style="margin: 20px;">Bạn thường nghe người khác nói ngôn ngữ lập trình C++ là một ngôn ngữ lập trình khó
+                học, vậy thì những
+                người nói câu đó chắc chưa từng học qua Assembly hay Prolog. Ngôn ngữ lập trình C++ dễ học với người mới
+                thậm chí mình thấy nó còn dùng dễ hơn là ngôn ngữ lập trình C. Nên bạn cứ tự tin mà học C++ ngay từ đầu,
+                nếu bạn thấy khó thì đó cũng là chuyện bình thường, vì việc học lập trình bất cứ mảng nào thì đều khó
+                cả.</p>
+
+            <h3 style="color: #0066cc;">Tài liệu học tập và cộng đồng lớn</h3>
+            <p style="margin: 20px;">Nguồn tài liệu và video hướng dẫn về lập trình C++ rất dồi dào, cộng đồng người học
+                lập trình C++ đông
+                đảo. Bạn có thể dễ dàng tìm các video hướng dẫn về lập trình C++ trên youtube, google hoặc các nhóm hỏi
+                đáp trên facebook.</p>
+
+            <h3 style="color: #0066cc;">C++ được giảng dạy tại nhiều trường đại học và phổ thông </h3>
+            <p style="margin: 20px;">Nhiều trường đại học sử dụng C++ để giảng dạy về lập trình, có thể kể đến như :
+                UET, PTIT, UIT, HCMUS,
+                UTE, HUST, Thủy Lợi ... Ngoài ra C++ được sử dụng rất nhiều tại bậc trung học cơ sở và trung học phổ
+                thông trong các cuộc thi về lập trình </p>
+
+            <h3 style="color: #0066cc;">Thư viện mạnh mẽ và có Lập trình Hướng đối tượng </h3>
+            <p style="margin: 20px;">Nếu bạn chưa biết lập trình hướng đối tượng là gì thì có thể tham khảo tại đây﻿,
+                C++ có thư viện thuật
+                toán và cấu trúc dữ liệu rất mạnh mẽ cung cấp cho bạn các công cụ hỗ trợ giải bài một cách tối ưu. Với
+                các ngôn ngữ lập trình như Java, PHP, Javascript, Python thì các thư viện thuật toán hay cấu trúc dữ
+                liệu đều có sẵn, trong C++ cũng có thư viện này sẽ giúp bạn nhanh chóng làm quen với các thư viện ở
+                trong các ngôn ngữ lập trình trên, nếu sau này bạn có học chúng. </p>
+
+            <h3 style="color: #0066cc;">Lựa chọn tối ưu cho lập trình thuật toán và lập trình thi đấu</h3>
+            <p style="margin: 20px;">C++ và C đều rất nhanh về tốc độ thực thi, tuy nhiên C lại không cung cấp thư viện
+                về thuật toán và cấu
+                trúc dữ liệu như C++, mà trong việc lập trình thi đấu hay thuật toán thì thời gian rất quan trọng. Vì
+                thế vừa để chương trình có thể chạy với thời gian tối ưu vừa tiết kiệm thời gian cài đặt thuật toán thì
+                C++ là lựa chọn tối ưu. Hầu hết các lập trình viên trong các cuộc thi về lập trình thi đấu, Olympic, học
+                sinh giỏi, tin học trẻ ... đều lựa chọn C++.</p>
+            <hr style="margin: 20PX;">
+            <h2>Kiểu dữ liệu</h2>
+            <table width="100%">
+                <thead>
+                    <tr style="background-color: #228b91;">
+                        <th>Kiểu</th>
+                        <th>Kích thước </th>
+                        <th>Vùng giá trị</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>char</td>
+                        <td>1 byte</td>
+                        <td>-128 tới 127 hoặc 0 tới 255</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned char </td>
+                        <td>1 byte</td>
+                        <td>0 tới 255</td>
+                    </tr>
+                    <tr>
+                        <td>signed char</td>
+                        <td>1 byte</td>
+                        <td>-128 tới 127</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>2 hoặc 4 bytes</td>
+                        <td>-32,768 tới 32,767 hoặc -2,147,483,648 tới 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned int </td>
+                        <td>2 hoặc 4 bytes</td>
+                        <td>0 tới 65,535 hoặc 0 tới 4,294,967,295</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>2 bytes</td>
+                        <td>-32,768 tới 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned short </td>
+                        <td>2 bytes</td>
+                        <td>0 tới 65,535</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>4 bytes</td>
+                        <td>-2,147,483,648 tới 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned long </td>
+                        <td>4 bytes</td>
+                        <td>0 tới 4,294,967,295</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>4 byte</td>
+                        <td>1.2E-38 tới 3.4E+38</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 byte</td>
+                        <td>2.3E-308 tới 1.7E+308</td>
+                    </tr>
+                    <tr>
+                        <td>long double</td>
+                        <td>10 byte</td>
+                        <td>3.4E-4932 tới 1.1E+4932</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+            <hr style="margin: 20px;">
+            <h2 style="margin: 20px;">[C++] từ A đến Z</h2>
+            <iframe width="100%" height="630" src="https://www.youtube.com/embed/hu20Ld4Yf-A?si=Lq96i5HAT7cd6gEW"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
+        </div>
+
+    </main>
+
+    <footer
+        style="padding: 30px ; background: linear-gradient(to right, #89c2fb, #228b91, #00509e); color: #d9e6f2; margin-top: 20px;">
+        <h4 style="text-align: center;">Mỗi giây phút học tập hôm nay là một khoản đầu tư cho sự thành công của
+            bạn
+            trong tương lai.</h4>
+    </footer>
+
+
+</body>
+
+</html>
